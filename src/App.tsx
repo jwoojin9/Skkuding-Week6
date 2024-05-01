@@ -7,7 +7,7 @@ import PokemonDetail from './components/PokemonDetail';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <nav>
             <h1>
