@@ -5,12 +5,11 @@ import { useEffect, useState } from "react";
 export default function PokemonItem({index}:any){
     const [pokemon, setPokemon] = useState<any>();
     useEffect(() => {
-        async function run() {
+        (async function run() {
             const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${index + 1}/`);
             const data2 = await data.json();
             setPokemon(data2)
-        }
-        run();
+        })();
     }, [])
     let typeText:string = "";
     pokemon?.types.forEach((value:any, index:number) => {

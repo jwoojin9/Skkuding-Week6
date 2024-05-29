@@ -6,7 +6,6 @@ const GET_POKEMON = gql`
     query PokeAPIquery($id: Int!) {
         pokemon_v2_pokemon(offset: $id, limit:1) {
             name
-            id
             base_experience
             height
             weight
@@ -31,8 +30,8 @@ export default function PokemonDetail(){
     const id = Number(useParams().id);
     const { loading, error, data } = useQuery(GET_POKEMON, {variables: {id: Number(id-1)}});
 
-    if (loading) return <div/>;
-    if (error) return <div/>;
+    if (loading) return <h2>Loading...</h2>;
+    if (error) return <h2>Error</h2>;
 
     const pokemon = data.pokemon_v2_pokemon[0];
     

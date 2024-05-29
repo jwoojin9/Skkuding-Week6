@@ -5,11 +5,20 @@ import PokemonList from './components/PokemonList';
 import {  } from 'react-router-dom';
 import PokemonDetail from './components/PokemonDetail';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import ReactDOM from 'react-dom/client';
 
 const client = new ApolloClient({
   uri: 'https://beta.pokeapi.co/graphql/v1beta',
   cache: new InMemoryCache(),
 });
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+);
 
 function App() {
   return (
@@ -25,7 +34,6 @@ function App() {
             <Routes>
               <Route path='/' element={<PokemonList/>}/>
               <Route path='/pokemon/:id' element={<PokemonDetail/>}/>
-
             </Routes>
           </main>
         </div>
