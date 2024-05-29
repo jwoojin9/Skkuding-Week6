@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Skkuding-Week6/static/css/main.d954e2a5.css",
+    "main.js": "/Skkuding-Week6/static/js/main.1e9910ee.js",
+    "static/js/453.14d559b0.chunk.js": "/Skkuding-Week6/static/js/453.14d559b0.chunk.js",
+    "index.html": "/Skkuding-Week6/index.html",
+    "main.d954e2a5.css.map": "/Skkuding-Week6/static/css/main.d954e2a5.css.map",
+    "main.1e9910ee.js.map": "/Skkuding-Week6/static/js/main.1e9910ee.js.map",
+    "453.14d559b0.chunk.js.map": "/Skkuding-Week6/static/js/453.14d559b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d954e2a5.css",
+    "static/js/main.1e9910ee.js"
+  ]
+}
